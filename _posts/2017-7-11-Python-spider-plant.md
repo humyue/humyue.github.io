@@ -18,7 +18,7 @@ author: Humy
 `$ pip install beautifulsoup4`
 #### 2.源程序
 
-```
+```py
 # -*- coding:utf-8 -*-
 import urllib.request
 import datetime  

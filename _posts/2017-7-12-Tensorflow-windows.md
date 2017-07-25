@@ -31,6 +31,7 @@ pip install --upgrade https://storage.googleapis.com/tensorflow/windows/cpu/tens
 这是还需要下载下面的插件
 [插件下载地址](https://www.microsoft.com/en-us/download/details.aspx?id=53587)
 下载完成后就可以运行起来了
+
 5.测试
 ```
 >>>import tensorflow as tf
@@ -39,6 +40,7 @@ pip install --upgrade https://storage.googleapis.com/tensorflow/windows/cpu/tens
 >>>print(sess.run(hello))
 Hello,TensorFlow!
 ```
+
 ***
 
 >二、安装 gpu版本的tensorflow
@@ -54,13 +56,17 @@ pip install --upgrade https://storage.googleapis.com/tensorflow/windows/gpu/tens
 
 3.安装CUDA和cuDnn
 安装CUDA之前请确保你的显卡型号支持CUDA,百度一下即可，不支持的话你就只有装cpu版的了
+
 ①[下载CUDA](https://developer.nvidia.com/cuda-downloads)
 ![CUDA下载页面](http://upload-images.jianshu.io/upload_images/2896168-149938386f97e9f3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 ②[cuDnn库下载](https://developer.nvidia.com/cudnn)
+
 ③解压cudnn文件，解压目录如下所示
 
 ![cuda解压目录](http://upload-images.jianshu.io/upload_images/2896168-a9d1e7f704a89223.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 **重点来了：将bin目录填入到path环境变量**
+
 4.测试
 ```
 import tensorflow as tf
@@ -76,7 +82,9 @@ print(tf.__version__)
 运行结果如下所示：
 
 ![运行结果图](http://upload-images.jianshu.io/upload_images/2896168-682c7850fe24a584.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 **ps:显卡有点渣~~   ^..^**
+
 事实证明：我的显卡装了GPU版本的tensorflow也没用
 `
 Ignoring visible gpu device (device: 0, name: GeForce GT 720M, pci bus id: 0000:01:00.0) with Cuda compute capability 2.1. The minimum required Cuda capability is 3.0.

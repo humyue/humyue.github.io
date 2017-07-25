@@ -27,6 +27,4 @@ type: page
 
 [廖雪峰](https://www.liaoxuefeng.com) \| [白俊遥博客](https://baijunyao.com/)
 
-## Comments
 
-{% include comments.html %}

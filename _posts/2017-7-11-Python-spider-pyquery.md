@@ -17,7 +17,8 @@ author: Humy
 
 ### 1.初始化
 * 字符串初始化
-```
+
+```py
 html = '''
 <div>
     <ul>
@@ -33,10 +34,11 @@ from pyquery import PyQuery as pq
 doc = pq(html)
 print(doc('li'))
 ```
+
 运行结果：
 ![运行结果图](http://upload-images.jianshu.io/upload_images/2896168-a85be79a6386fac0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 * URL初始化
-```
+```py
 from pyquery import PyQuery as pq
 doc = pq(url='http://www.baidu.com')
 print(doc('head'))
@@ -46,7 +48,7 @@ print(doc('head'))
 ![运行结果图](http://upload-images.jianshu.io/upload_images/2896168-23502991b9b5ebce.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 * 文件初始化
-```
+```py
 from pyquery import PyQuery as pq
 doc = pq(filename='demo.html')
 print(doc('li'))
@@ -55,7 +57,7 @@ print(doc('li'))
 ![运行结果图](http://upload-images.jianshu.io/upload_images/2896168-a85be79a6386fac0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ### 2.基本CSS选择器
-```
+```py
 html = '''
 <div id="container">
     <ul class="list">
@@ -76,7 +78,8 @@ print(doc('#container .list li'))
 
 ### 3.查找元素
 * 子元素
-```
+
+```py
 html = '''
 <div id="container">
     <ul class="list">
@@ -99,21 +102,23 @@ print(lis)
 ```
 运行结果：
 ![运行结果图](http://upload-images.jianshu.io/upload_images/2896168-0cdd7cdc9f6941f8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-```
+```py
 lis = items.children()
 print(type(lis))
 print(lis)
 ```
 运行结果：
 ![运行结果图](http://upload-images.jianshu.io/upload_images/2896168-8952c0a329bbc416.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-```
+```py
 lis = items.children('.active')
 print(lis)
 ```
 运行结果：
 ![运行结果图](http://upload-images.jianshu.io/upload_images/2896168-e2ea1493ee4424fe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 * 父元素
-```
+
+```py
 html = '''
 <div id="container">
     <ul class="list">
@@ -134,7 +139,7 @@ print(container)
 ```
 运行结果：
 ![运行结果](http://upload-images.jianshu.io/upload_images/2896168-597e737f5d6249be.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-```
+```py
 html = '''
 <div class="wrap">
     <div id="container">
@@ -157,14 +162,15 @@ print(parents)
 ```
 运行结果：
 ![运行结果图](http://upload-images.jianshu.io/upload_images/2896168-300c74b71d28ae16.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-```
+```py
 parent = items.parents('.wrap')
 print(parent)
 ```
 运行结果：
 ![运行结果图](http://upload-images.jianshu.io/upload_images/2896168-98658ec91fa15637.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 * 兄弟元素
-```
+
+```py
 html = '''
 <div class="wrap">
     <div id="container">
@@ -185,7 +191,7 @@ print(li.siblings())
 ```
 运行结果：
 ![运行结果图](http://upload-images.jianshu.io/upload_images/2896168-e889b7907f813d4f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-```
+```py
 html = '''
 <div class="wrap">
     <div id="container">
@@ -209,7 +215,8 @@ print(li.siblings('.active'))
 
 ### 4.遍历
 * 单个元素
-```
+
+```py
 html = '''
 <div class="wrap">
     <div id="container">
@@ -231,7 +238,8 @@ print(li)
 运行结果：
 ![运行结果图](http://upload-images.jianshu.io/upload_images/2896168-60b9c1d82ff753a4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 * 多个元素
-```
+
+```py
 html = '''
 <div class="wrap">
     <div id="container">
@@ -257,7 +265,8 @@ for li in lis:
 
 ### 5.获取信息
 * 获取属性
-```
+
+```py
 html = '''
 <div class="wrap">
     <div id="container">
@@ -281,7 +290,8 @@ print(a.attr.href)
 运行结果：
 ![运行结果图](http://upload-images.jianshu.io/upload_images/2896168-b149ea6688b3b68f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 * 获取文本
-```
+
+```py
 html = '''
 <div class="wrap">
     <div id="container">
@@ -304,7 +314,8 @@ print(a.text())
 运行结果：
 ![运行结果图](http://upload-images.jianshu.io/upload_images/2896168-ec82e6c9b34774ea.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 * 获取HTML
-```
+
+```py
 html = '''
 <div class="wrap">
     <div id="container">
@@ -329,7 +340,8 @@ print(li.html())
 
 ### 6.DOM操作
 * addClass、removeClass
-```
+
+```py
 html = '''
 <div class="wrap">
     <div id="container">
@@ -354,8 +366,10 @@ print(li)
 ```
 运行结果：
 ![运行结果图](http://upload-images.jianshu.io/upload_images/2896168-0e06739b7c73c552.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 * attr、css
-```
+
+```py
 html = '''
 <div class="wrap">
     <div id="container">
@@ -381,7 +395,8 @@ print(li)
 运行结果：
 ![运行结果图](http://upload-images.jianshu.io/upload_images/2896168-40430404ac9c26fa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 * remove
-```
+
+```py
 html = '''
 <div class="wrap">
     Hello, World
@@ -401,7 +416,7 @@ print(wrap.text())
 [http://pyquery.readthedocs.io/en/latest/api.html](http://pyquery.readthedocs.io/en/latest/api.html)
 
 ### 7.伪类选择器
-```
+```py
 html = '''
 <div class="wrap">
     <div id="container">

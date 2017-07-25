@@ -18,7 +18,7 @@ author: Humy
 ## 1.首先需要导入urllib包的request模块
 `import urllib.request`
 ## 2.小试牛刀
-```
+```py
 import urllib.request as g
 response=g.urlopen("http://www.qq.com/")
 html=response.read()
@@ -39,7 +39,7 @@ print(html)
 **知道了这些，下面就很简单了**
 ## 4.参考代码
 
-```
+```py
 import urllib.request
 import urllib.parse
 import json

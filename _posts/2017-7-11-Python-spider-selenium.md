@@ -16,7 +16,7 @@ author: Humy
 
 
 ### 1.基本使用
-```
+```py
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
@@ -39,7 +39,7 @@ finally:
 运行结果：
 ![运行结果图](http://upload-images.jianshu.io/upload_images/2896168-953660dfd3bf358e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 ### 2.声明浏览器对象
-```
+```py
 from selenium import webdriver
 browser=webdriver.Chrome()
 browser=webdriver.Firefox()
@@ -48,7 +48,7 @@ browser=webdriver.PhantomJS()
 browser=webdriver.Safari()
 ```
 ### 3.访问页面
-```
+```py
 from selenium import webdriver
 browser=webdriver.Chrome()
 browser.get('https://www.taobao.com')
@@ -65,7 +65,7 @@ browser.close()
 * find_element_by_class_name
 * find_element_by_css_selector
 
-```
+```py
 from selenium import webdriver
 browser=webdriver.Chrome()
 browser.get('https://www.taobao.com')
@@ -79,7 +79,7 @@ browser.close()
 ![运行结果](http://upload-images.jianshu.io/upload_images/2896168-081dc8509cf4dba2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 也可以这样写：
-```
+```py
 from selenium import webdriver
 browser=webdriver.Chrome()
 browser.get('https://www.taobao.com')
@@ -99,7 +99,7 @@ browser.close()
 * find_elements_by_class_name
 * find_elements_by_css_selector
 
-```
+```py
 from selenium import webdriver
 browser=webdriver.Chrome()
 browser.get('https://www.taobao.com')
@@ -108,7 +108,7 @@ print(lis)
 browser.close()
 ```
 同样的，也可以这样写：
-```
+```py
 from selenium import webdriver
 browser=webdriver.Chrome()
 browser.get('https://www.taobao.com')
@@ -117,7 +117,7 @@ print(lis)
 browser.close()
 ```
 ### 6.元素交互操作
-```
+```py
 from selenium import webdriver
 import time
 browser=webdriver.Chrome()
@@ -131,7 +131,7 @@ btn=browser.find_element_by_class_name('btn-search')
 btn.click()
 ```
 ### 7.交互动作
-```
+```py
 from selenium import webdriver
 from selenium.webdriver import ActionChains
 browser=webdriver.Chrome()
@@ -145,7 +145,7 @@ actions.drag_and_drop(source,target)
 actions.perform()
 ```
 ### 8.执行JavaScript
-```
+```py
 from selenium import webdriver
 browser=webdriver.Chrome()
 browser.get('https://www.zhihu.com/explore')
@@ -154,7 +154,7 @@ browser.execute_script('alert("To Button")')
 ```
 ### 9.获取元素信息
 * 获取属性
-```
+```py
 from selenium import webdriver
 browser=webdriver.Chrome()
 browser.get('https://www.zhihu.com/explore')
@@ -166,8 +166,7 @@ print(logo.get_attribute('class'))
 ![运行结果图](http://upload-images.jianshu.io/upload_images/2896168-b13d6ce5b3c5aa7a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 * 获取文本值
-
-```
+```py
 from selenium import webdriver
 browser=webdriver.Chrome()
 browser.get('https://www.zhihu.com/explore')
@@ -177,7 +176,7 @@ print(btn.text)
 输出：`>>>提问`
 
 * 获取ID,位置，标签名，大小
-```
+```py
 from selenium import webdriver
 browser=webdriver.Chrome()
 browser.get('https://www.zhihu.com/explore')
@@ -188,14 +187,14 @@ print(btn.tag_name)
 print(btn.size)
 ```
 输出：
-```
+```py
 >>>0.12090135319150486-1
 >>>{'x': 758, 'y': 7}
 >>>button
 >>>{'height': 32, 'width': 66}
 ```
 ### 10.Frame
-```
+```py
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 browser=webdriver.Chrome()
@@ -222,7 +221,7 @@ print(logo.text)
 >当时用了隐式等待执行测试的时候，如果webdriver没有在DOM中找到元素，将继续等待，超出设定时间后则抛出找不到元素的异常，换句话说，当查找元素或元素没有立即出现的时候，隐式等待将等待一段时间再查找DOM,默认时间是0秒
 
 
-```
+```py
 from selenium import webdriver
 browser=webdriver.Chrome()
 browser.implicitly_wait(10)
@@ -254,7 +253,7 @@ print(input)
 * element_located_selection_state_to_be 传入定位元组以及状态，相等返回True，否则返回False
 * alert_is_present 是否出现Alert
 
-```
+```py
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
@@ -270,7 +269,7 @@ print(input,button)
 ![运行结果图](http://upload-images.jianshu.io/upload_images/2896168-930bb53fb0a2922e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ### 12.前进后退
-```
+```py
 import time
 from selenium import webdriver
 browser=webdriver.Chrome()
@@ -284,7 +283,7 @@ browser.close()
 ```
 
 ### 13.Cookies
-```
+```py
 from selenium import webdriver
 browser=webdriver.Chrome()
 browser.get('https://www.zhihu.com/explore')
@@ -296,7 +295,7 @@ print(browser.get_cookies())
 ```
 
 ### 14.选项卡管理
-```
+```py
 import time
 from selenium import webdriver
 browser=webdriver.Chrome()
@@ -310,14 +309,14 @@ browser.switch_to_window(browser.window_handles(0))
 browser.get('https://python.org')
 ```
 ### 15.异常处理
-```
+```py
 from selenium import webdriver
 browser=webdriver.Chrome()
 browser.get('https://www.baidu.com')
 browser.find_element_by_id('hello')
 ```
 
-```
+```py
 from selenium import webdriver
 from selenium.common.exceptions import TimeoutException,NoSuchElementException
 browser=webdriver.Chrome()

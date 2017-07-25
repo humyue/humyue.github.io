@@ -41,6 +41,3 @@ type: page
 * [李宏毅机器学习](https://www.bilibili.com/video/av10590361/)
 
 
-## Comments
-
-{% include comments.html %}
