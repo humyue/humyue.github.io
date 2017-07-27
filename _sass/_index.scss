@@ -9,8 +9,14 @@
     .left {
         >ul {
             padding: 0;
+
             >li {
                 list-style: none;
+                border:solid #e8e8e8 2px;
+                padding:5px;
+                margin-bottom:10px;
+                border-radius:4px;
+                box-shadow: 1px 1px 1px #888888;
             }
             li {
                 color: #333;
@@ -50,10 +56,15 @@
                     text-align: right;
                     font-size: 14px;
                     a {
-                        color: #778ab0;
+                        color: #fff;
+                        width:100px;
+                        height:25px;
+                        padding:4px;
+                        background:#2aa5ce;
+                        border-radius:8px;
                         transition: 0.2s ease;
                         &:hover {
-                            color: #5872a7;
+                            background: #0583ac;
                         }
                         i {
                             padding-right: 3px;
@@ -138,10 +149,10 @@
                 .tags-cloud {
                     font-weight: normal;
                     a {
-                        padding: 0 3px;
                         border-radius: 5px;
+                        margin-right:5px;
                         &:hover {
-                            background-color: #f0e7ce;
+                            background-color:orange;
                         }
                     }
                 }

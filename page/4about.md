@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 关于
+title: 我
 permalink: /about/
 icon: user
 type: page
@@ -11,7 +11,7 @@ type: page
 
 ## 关于我
 
-<iframe src="/logo.jpg" style="border: 0;height: 300px;width: 300px;overflow: hidden;" frameBorder="0"></iframe>
+![阿信]({{ "/img/logo.jpg" | prepend: site.baseurl }})
 
 喜欢五月天，爱唱歌的研二学生狗一枚
 

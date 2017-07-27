@@ -17,10 +17,6 @@ layout: default
             </div>
 
             <div class="label-card">
-                {% if page.meta %}<i class="fa fa-key"></i>{{ page.meta }}  {% endif %}
-            </div>
-
-            <div class="label-card">
             {% include category.html %}
             </div>
 
@@ -74,7 +70,7 @@ layout: default
             <!-- Content -->
             <div class="side content">
                 <div>
-                    Content
+                    内容
                 </div>
                 <ul id="content-side" class="content-ul">
                     {% if hasSimilar.size > 0 %}

@@ -21,9 +21,6 @@ layout: default
                         {% if post.author %}<i class="fa fa-user"></i>{{ post.author }}
                         {% endif %}
                     </div>
-                    <div class="label-card">
-                        {% if page.meta %}<i class="fa fa-key"></i>{{ page.meta }}  {% endif %}
-                    </div>
 
                     <div class="label-card">
                     {% include category.html %}
@@ -37,9 +34,9 @@ layout: default
                     {{post.excerpt}}
                 </div>
                 <div class="read-all">
-                    <a  href="{{ post.url | prepend: site.baseurl }}"><i class="fa fa-newspaper-o"></i>Read All</a>
+                    <a  href="{{ post.url | prepend: site.baseurl }}"><i class="fa fa-newspaper-o"></i>阅读全文</a>
                 </div>
-                <hr>
+                <!--<hr>-->
               </li>
             {% endfor %}
         </ul>
@@ -71,11 +68,11 @@ layout: default
 		
 			 <div class="side">
                 <div>
-                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                    <i class="fa fa-heart" aria-hidden="true"></i>
                     头像
                 </div>
                 <ul class="content-ul" recent>
-                   <img src="{{ "/img/2.jpg" | prepend: site.baseurl }}" style="height:200px;width:200px;border-radius:100px;" align="center">
+                   <img src="{{ "/img/head.jpg" | prepend: site.baseurl }}" style="height:200px;width:200px;border-radius:100px;" align="center">
                 </ul>
             </div>
 			
@@ -150,7 +147,7 @@ layout: default
                       {% else %}
                         {% assign color = 8 | minus: base %}
                       {% endif %}
-                      <a href="{{ root_url }}/{{ site.tag_dir }}#{{ tag[0] }}" style="font-size: {{ size }}pt; color: #{{ color }}{{ color }}{{ color }};">{{ tag[0] }}</a>
+                      <a href="{{ root_url }}/{{ site.tag_dir }}#{{ tag[0] }}" style="color: #{{ color }}{{ color }}{{ color }};">{{ tag[0] }}</a>
                     {% endfor %}
                 </div>
             </div>
