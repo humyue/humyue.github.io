@@ -17,10 +17,10 @@ type: page
 
 ## 联系我
 
-* QQ：1449902783
-* Wchat: hmy4994220
-* Email：1449902783@qq.com
-* [Weibo](http://weibo.com/hmyoppa)
+* 企鹅：1449902783
+* 微信: hmy4994220
+* 邮箱：1449902783@qq.com
+* [新浪微博](http://weibo.com/hmyoppa)
 
 
 ## 友情链接
