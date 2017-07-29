@@ -102,7 +102,9 @@ sudo /etc/default/grub
 将里面的`GRUB_DEFAULT=0`,改为`GRUB_DEFAULT=4`
 `GRUB_TIMEOUT=10`,改为`GRUB_TIMEOUT=5`，然后保存,再执行
 
-`sudo update-grub`
+```
+sudo update-grub
+```
 
 ### Albert快捷搜索
 
