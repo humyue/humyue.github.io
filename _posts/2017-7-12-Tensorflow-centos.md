@@ -200,7 +200,7 @@ help-install new software-Add
 
 需要等大概10分钟。
 
-输入strings /lib64/libc.so.6|grep GLIBC发现已经更新 
+输入`strings /lib64/libc.so.6|grep GLIBC`发现已经更新 
 
 ```
 GLIBC_2.2.5

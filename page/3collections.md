@@ -13,13 +13,10 @@ type: page
 
 * [李宏毅教授教程](http://speech.ee.ntu.edu.tw/~tlkagk/courses.html)
 * [视觉与学习青年学者研讨会](http://valser.org/forum.php?gid=103)
-* [Python 静觅](http://cuiqingcai.com/category/technique/python)
-* [廖雪峰官网](http://www.liaoxuefeng.com/)
-* [白俊遥博客](https://baijunyao.com/)
 
 ## 好文转载
 
-
+* [贺完结！CS231n官方笔记授权翻译总集篇发布](https://zhuanlan.zhihu.com/p/21930884?refer=intelligentunit)
 * [Python：一篇文章掌握Numpy的基本用法](http://www.jianshu.com/p/60bf50100c2f)
 * [ Deep Learning-TensorFlow系列](http://blog.csdn.net/u013751160/article/category/6801799/2)
 * [ImageNet 历届冠军最新评析：哪个深度学习模型最适合你？](https://baijiahao.baidu.com/po/feed/share?wfr=spider&for=pc&context=%7B%22sourceFrom%22:%22bjh%22,%22nid%22:%22news_3068269001387025807%22%7D)

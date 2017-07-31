@@ -23,8 +23,3 @@ type: page
 * [新浪微博](http://weibo.com/hmyoppa)
 
 
-## 友情链接
-
-[廖雪峰](https://www.liaoxuefeng.com) \| [白俊遥博客](https://baijunyao.com/)
-
-
