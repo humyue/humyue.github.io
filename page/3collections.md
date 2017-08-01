@@ -44,4 +44,5 @@ type: page
 * [腾讯课堂](https://ke.qq.com/)
 * [李宏毅机器学习](https://www.bilibili.com/video/av10590361/)
 
-
+## 评论
+{% include comments.html %}

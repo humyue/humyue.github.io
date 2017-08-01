@@ -22,4 +22,5 @@ type: page
 * 邮箱：1449902783@qq.com
 * [新浪微博](http://weibo.com/hmyoppa)
 
-
+## 评论
+{% include comments.html %}
