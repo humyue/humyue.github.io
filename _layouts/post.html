@@ -29,10 +29,17 @@ layout: default
         <article itemscope itemtype="http://schema.org/BlogPosting">
         {{content}}
         </article>
+
         <br>
+
         <span style="color:red">本文为Humy原创文章,转载无需和我联系,但请注明来自</span><a href="https://humyue.github.io" target="_blank">https://humyue.github.io</a>
+        
         <hr>
 
+        <div>
+            {% include share.html %}
+        </div>
+     
         <div id="zanshang">
             <span>如果觉得我的文章对您有用，请随意赞赏。您的支持将鼓励我继续创作！</span>
             <div id="btn">
@@ -40,6 +47,7 @@ layout: default
             </div>
             <em>赞赏者请留言你的大名</em>
         </div>
+
         <div id="pay" class="none">
             <div class="qs">
                 <img src="{{ "/img/wchat.jpg " | prepend: site.baseurl }}" alt="微信">
@@ -50,7 +58,9 @@ layout: default
                  <span>支付宝支付</span>
             </div>
         </div>
+        
         <script src="{{ "/js/jquery-1.7.2.min.js" | prepend: site.baseurl }}" charset="utf-8"></script>
+
         <script>
             $(function(){
                 $("#btn").toggle(
