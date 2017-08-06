@@ -10,6 +10,7 @@ type: page
 {:toc}
 
 
+* [HyG](https://gaohaoyang.github.io/){:target="_blank"}
 * [白俊遥博客](https://baijunyao.com/){:target="_blank"}
 * [Python 静觅](http://cuiqingcai.com/){:target="_blank"}
 * [莫烦Python](https://morvanzhou.github.io/){:target="_blank"}
