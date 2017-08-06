@@ -11,6 +11,7 @@ type: page
 
 ## 学习网站
 
+* [机器学习教程SharEDITor](http://www.shareditor.com/)
 * [李宏毅教授教程](http://speech.ee.ntu.edu.tw/~tlkagk/courses.html)
 * [视觉与学习青年学者研讨会](http://valser.org/forum.php?gid=103)
 
