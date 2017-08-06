@@ -27,8 +27,8 @@ description_footer: 爱学习，爱生活！
 #duoshuo_shortname: humy
 #disqus_shortname: humy
 #youyan_shortname: humy
-#laibili_shortname: humy
-changyan_shortname: humy
+laibili_shortname: humy
+
 # statistic analysis 统计代码
 # 百度统计 id，将统计代码替换为自己的百度统计id，即
 # hm.src = "//hm.baidu.com/hm.js?xxxxxxxxxxxx";
