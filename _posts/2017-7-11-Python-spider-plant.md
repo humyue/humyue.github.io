@@ -90,7 +90,7 @@ if __name__=='__main__':
     download()
     
 ```
-这里附上链接：[程序链接](http://pan.baidu.com/s/1hr9Fz5y)
+这里附上链接：[程序链接](https://github.com/humyue/PySpiderDemo){:target="_blank"}
 #### 3.运行结果图
 
 ![效果图](http://upload-images.jianshu.io/upload_images/2896168-6ab1e8775ecf0aff.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
