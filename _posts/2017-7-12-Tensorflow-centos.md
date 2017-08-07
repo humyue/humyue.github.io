@@ -9,26 +9,30 @@ author: Humy
 * content
 {:toc}
 
+> 上一篇文章介绍了windows系统上Tensorflow环境的搭建，但是笔者电脑配置不高，运行一些demo cpu直接爆表，所以目标转向了阿里云的服务器（ps:笔者不是土豪，服务器是老师的），这里记录下搭建过程中遇到的坑，不是一点点啊~~~
+
+
+
+
 #### 目录
+
 * Centos图形化显示
 * Centos下安装python3.5
 * pip安装tensorflow
 
+### 1.Centos图形化显示
 
-
-
-# 1.Centos图形化显示
 首先准备三个软件：Xshell,Xftp,Xmanager,下面附上百度云链接：
 [准备软件下载地址](http://pan.baidu.com/s/1eSEdii2)
 先下载好上述三个软件，这里只用配置Xshell连接阿里云服务器即可，另外两个软件都可以通过这个来打开，Xshell需要进行如下配置：
 
-## ①
+#### ①
 ![登录口令密码](http://upload-images.jianshu.io/upload_images/2896168-325ae1ee788cbf01.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
  
-## ②
+#### ②
 ![](http://upload-images.jianshu.io/upload_images/2896168-284618fa191d184e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-## ③
+#### ③
 ![Paste_Image.png](http://upload-images.jianshu.io/upload_images/2896168-48ee3682998f9411.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 配置完，先不要管，连接到服务器，然后在服务器上安装相关的软件:
@@ -45,7 +49,8 @@ author: Humy
 这时应该会出现图形化界面了
 然后第一步就很轻松的搞定了，下面开始讲Centos下安装python3.5
 
-# 2.Centos下安装python3.5
+### 2.Centos下安装python3.5
+
 因为我的服务器上默认安装的是python2.7,因为有可能linux下有的程序依赖这个环境，所以不要去动python2.7,这时需要去官网下载python3.5，我上面的链接也有提供，如果嫌百度云慢的可以直接去官网下载。下载完，利用Xftp工具将本地的安装包上传到服务器的目录中去，我这里放入了`/usr/local/src下`后面的一些安装包我也是放在了这个目录下
 `tar -xzvf Python-3.5.0.tgz`
 `cd Python-3.5.0`
@@ -84,8 +89,9 @@ Python 3.5.0
 '#!/usr/bin/python_old2
 就可以了
 
-# 3.pip安装tensorflow
-## ①安装pip之前需要安装setuptools
+### 3.pip安装tensorflow
+
+#### ①安装pip之前需要安装setuptools
 
 这个我之前的链接也已经提供了（下面出现的工具百度云链接也都有，下面就不再赘述了）
 同样是利用xftp工具上传到
@@ -111,7 +117,7 @@ make
 make install
 ```
 
-## ②安装pip
+#### ②安装pip
 将pip-9.0.1.tar.gz上传到src目录
 
 `tar -zxvf pip-9.0.1.tar.gz`
@@ -125,7 +131,7 @@ python setup.py install
 
 `ln -s /usr/local/python3/bin/pip3 /usr/bin/pip3  `
 
-## ③使用pip安装Tensorflow
+#### ③使用pip安装Tensorflow
 
 ```
 pip3 install https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.2.1-cp35-cp35m-linux_x86_64.whl
@@ -148,7 +154,7 @@ make install
 pip3 install https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.2.1-cp35-cp35m-linux_x86_64.whl
 ```
 
-## ④安装Eclipse
+#### ④安装Eclipse
 安装Eclipse之前需要先安装jdk,将下载好的jdk放入src目录下
 
 `rpm -ivh jdk-8u131-linux-x64.rpm`
