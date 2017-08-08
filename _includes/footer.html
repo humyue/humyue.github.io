@@ -1,3 +1,29 @@
+<script type = "text/javascript">
+    window.onload=function(){
+        function shunjishi(){
+            var now_time = new Date();//生成当前时间的时间对象
+            var start_time = new Date(2017,6,24,21,00,00);//生成开始时间的时间对象
+            var diff_time = now_time.getTime()-start_time.getTime();
+            var day = Math.floor(diff_time/(24*60*60*1000));//获得天
+            diff_time = diff_time%(24*60*60*1000);
+            var hour = Math.floor(diff_time/(60*60*1000));//获得小时
+            diff_time = diff_time%(60*60*1000);
+            var min = Math.floor(diff_time/(60*1000));//获得分钟
+            diff_time = diff_time%(60*1000);
+            var sec = Math.floor(diff_time/1000);//获得秒
+            var tian = document.getElementById('tian');
+            var xiaoshi = document.getElementById('xiaoshi');
+            var fen = document.getElementById('fen');
+            var miao = document.getElementById('miao');
+            tian.innerHTML=day;
+            xiaoshi.innerHTML=hour;
+            fen.innerHTML=min;
+            miao.innerHTML=sec;
+        }
+        shunjishi()
+        setInterval(shunjishi,1000)
+    }
+</script>
 <footer class="site-footer">
 
 
@@ -16,6 +42,9 @@
             <a href="https://www.facebook.com/{{site.facebook_username}}" title="Facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a> {% endif %}  {% if site.linkedIn_username %}
             <a href="https://www.linkedin.com/in/{{site.linkedIn_username}}" title="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a> {% endif %} {% if site.dribbble_username %}
             <a href=" https://dribbble.com/{{site.dribbble_username}}" title="Dribbble"><i class="fa fa-dribbble" aria-hidden="true"></i></a> {% endif %}
+        </p>
+        <p>
+            小站已经运行<span id="tian">0</span>天<span id="xiaoshi">0</span>小时<span id="fen">0</span>分<span id="miao">0</span>秒</h1>啦
         </p>
         <p>
             本站总访问量<span id="busuanzi_value_site_pv"></span>次，本站访客数<span id="busuanzi_value_site_uv"></span>人次，本文总阅读量<span id="busuanzi_value_page_pv"></span>次
