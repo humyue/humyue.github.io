@@ -2,8 +2,8 @@
 layout: post
 title:  "Tensorfolw使用方法(1)"
 date:   2017-08-07 10:14:54
-categories: Tesorflow
-tags: Tesorflow
+categories: Tensorflow
+tags: Tensorflow
 author: Humy
 ---
 * content
