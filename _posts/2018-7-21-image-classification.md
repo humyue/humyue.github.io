@@ -16,7 +16,7 @@ author: Humy
 
 在正式开始之前，首先大家要自己动手去搭建Tensorflow环境(gpu,cpu版均可)，如何搭建请参考我前面的教程。环境搭好过后，就可以往下看了：
 
-####1.收集数据
+#### 1.收集数据
 
 首先，大家要准备好数据集，至少两类。没有也没关系，博主已经写了一个小程序，帮你们自动去收集。
 程序结构如下所示：
@@ -31,7 +31,7 @@ author: Humy
 ![运行结果]({{ "/asserts/img/post/2018-7-21/03.png" | prepend: site.baseurl }})
 这样，苹果和梨的两类数据就收集好了。
 
-####2.模型训练
+#### 2.模型训练
 
 模型训练和测试只需要用到两个代码文件，如下所示：
 
@@ -56,7 +56,7 @@ author: Humy
 
 ![image.png]({{ "/asserts/img/post/2018-7-21/05.png" | prepend: site.baseurl }})
 
-####3.模型测试
+#### 3.模型测试
 
 模型训练好以后，接着就可以运行`test.py`进行识别了，在运行之前，需要对 `test.py`进行一些设置(自行找到对应地方进行设置)：
 
@@ -80,4 +80,5 @@ for root,dirs,files in os.walk('F:\\Test\\code\\test_image'):
 运行结果如下所示：
 
 ![image.png]({{ "/asserts/img/post/2018-7-21/07.png" | prepend: site.baseurl }})
+
 所以，简单的图像识别实例就完成了。
