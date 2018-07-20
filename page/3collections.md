@@ -42,6 +42,3 @@ type: page
 * [白熊音乐](https://space.bilibili.com/71565747#/){:target="_blank"}
 * [趣弹音乐](https://space.bilibili.com/35461776/#/){:target="_blank"}
 
-
-## 评论
-{% include comments.html %}
