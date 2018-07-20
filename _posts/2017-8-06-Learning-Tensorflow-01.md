@@ -170,7 +170,7 @@ with tf.Session() as sess:
 print(z2_value)
 
 ```
-运行结果：![结果1]({{ "/img/res_01.jpg" | prepend: site.baseurl }})
+运行结果：![结果1]({{ "/asserts/img/post/2017-8-06/res_01.jpg" | prepend: site.baseurl }})
 
 
 ***

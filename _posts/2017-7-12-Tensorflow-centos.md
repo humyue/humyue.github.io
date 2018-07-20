@@ -27,13 +27,13 @@ author: Humy
 先下载好上述三个软件，这里只用配置Xshell连接阿里云服务器即可，另外两个软件都可以通过这个来打开，Xshell需要进行如下配置：
 
 #### ①
-![登录口令密码](http://upload-images.jianshu.io/upload_images/2896168-325ae1ee788cbf01.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![登录口令密码]({{ "/asserts/img/post/2017-7-12/01.png" | prepend: site.baseurl }})
  
 #### ②
-![](http://upload-images.jianshu.io/upload_images/2896168-284618fa191d184e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![]({{ "/asserts/img/post/2017-7-12/02.png" | prepend: site.baseurl }})
 
 #### ③
-![Paste_Image.png](http://upload-images.jianshu.io/upload_images/2896168-48ee3682998f9411.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![Paste_Image.png]({{ "/asserts/img/post/2017-7-12/03.png" | prepend: site.baseurl }})
 
 配置完，先不要管，连接到服务器，然后在服务器上安装相关的软件:
 
@@ -171,21 +171,21 @@ pip3 install https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.2.
 
 进入图形界面，找到Eclipse解压的目录双击安装就好了
 运行界面如下：
-![](http://upload-images.jianshu.io/upload_images/2896168-ba74e4e14a21a38a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![]({{ "/asserts/img/post/2017-7-12/04.png" | prepend: site.baseurl }})
 这时需要在Eclipse上扩展PyDev插件：
 help-install new software-Add
 
-![](http://upload-images.jianshu.io/upload_images/2896168-cda18cdf8f82aedc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![]({{ "/asserts/img/post/2017-7-12/05.png" | prepend: site.baseurl }})
 
 
 一切安装完成后，新建一个PyDev项目，
 这时会让你配置python解释器环境，选择自动配置就可以了，后面也可以进行如下图所示的更改：
 
-![](http://upload-images.jianshu.io/upload_images/2896168-2bb995609f8239c6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![]({{ "/asserts/img/post/2017-7-12/06.png" | prepend: site.baseurl }})
 
 然后运行第一个tensorflow程序，会报一下错误：
 
-![](http://upload-images.jianshu.io/upload_images/2896168-436873ec95323cb8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![]({{ "/asserts/img/post/2017-7-12/07.png" | prepend: site.baseurl }}
 
 为了解决这个问题，哥哥走了许多弯路~.~
 好算是最后终于搞定了！！
@@ -241,6 +241,6 @@ ln -s libstdc++.so.6.0.20 libstdc++.so.6
 ```
 
 大功告成了！测试一下
-![](http://upload-images.jianshu.io/upload_images/2896168-7fcd9dff5e9199cd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![]({{ "/asserts/img/post/2017-7-12/08.png" | prepend: site.baseurl }})
 
 运行成功！开森~~

@@ -58,13 +58,13 @@ pip install --upgrade https://storage.googleapis.com/tensorflow/windows/gpu/tens
 安装CUDA之前请确保你的显卡型号支持CUDA,百度一下即可，不支持的话你就只有装cpu版的了
 
 ①[下载CUDA](https://developer.nvidia.com/cuda-downloads)
-![CUDA下载页面](http://upload-images.jianshu.io/upload_images/2896168-149938386f97e9f3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![CUDA下载页面]({{ "/asserts/img/post/2017-7-13/01.png" | prepend: site.baseurl }})
 
 ②[cuDnn库下载](https://developer.nvidia.com/cudnn)
 
 ③解压cudnn文件，解压目录如下所示
 
-![cuda解压目录](http://upload-images.jianshu.io/upload_images/2896168-a9d1e7f704a89223.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![cuda解压目录]({{ "/asserts/img/post/2017-7-13/02.png" | prepend: site.baseurl }}
 **重点来了：将bin目录填入到path环境变量**
 
 4.测试
@@ -81,7 +81,7 @@ print(tf.__version__)
 ```
 运行结果如下所示：
 
-![运行结果图](http://upload-images.jianshu.io/upload_images/2896168-682c7850fe24a584.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![运行结果图]({{ "/asserts/img/post/2017-7-13/03.png" | prepend: site.baseurl }})
 
 **ps:显卡有点渣~~   ^..^**
 
