@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Python之列表、元组和字符串"
+title:  "零基础学Python之列表、元组和字符串"
 date:   2017-07-11 12:14:54
 categories: Python
 tags:  Python

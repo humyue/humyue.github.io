@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "window7下Tensorflow安装简述"
+title:  "Window7下Tensorflow安装简述"
 date:   2017-07-12 16:30:54
 categories: Tensorflow
 tags:  Tensorflow

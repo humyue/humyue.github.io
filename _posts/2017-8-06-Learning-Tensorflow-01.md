@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Tensorfolw使用方法(1)"
+title:  "Tensorfolw基本教程(1)"
 date:   2017-08-07 10:14:54
 categories: Tensorflow
 tags: Tensorflow

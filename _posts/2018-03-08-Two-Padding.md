@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "卷积池化运算中的两种Padding介绍"
+title:  "卷积神经网络中两种Padding方式的介绍"
 date:   2018-03-08 10:22:54
 categories: Tensorflow
 tags: Tensorflow

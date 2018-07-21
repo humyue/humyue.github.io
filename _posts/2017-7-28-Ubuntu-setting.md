@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Ununtu系统一些基本设置"
+title:  "Windows、Ununtu双系统安装及设置"
 date:   2017-07-28 22:14:54
 categories: Ubuntu
 tags:  Ubuntu

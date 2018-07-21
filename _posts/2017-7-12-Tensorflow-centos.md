@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Centos6-8下安装Eclipse-for-PyDev以及图形化显示"
+title:  "CentOS6.8下安装Tensorflow以及图像化Eclipse-for-PyDev"
 date:   2017-07-12 18:30:54
 categories: Tensorflow
 tags:  Tensorflow
