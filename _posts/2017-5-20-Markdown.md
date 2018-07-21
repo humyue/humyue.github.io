@@ -66,7 +66,6 @@ author: Humy
 ```
 
 `效果如下：`
-
 1. aaa
 2. bbb
 3. ccc
@@ -159,7 +158,7 @@ public class HelloWorld{
 
 `效果如下:`
 
-![阿信]({{ "/asserts/img/post/2017-5-20/head.png" | prepend: site.baseurl }})
+![阿信]({{ "/asserts/img/post/2017-5-20/head.jpg" | prepend: site.baseurl }})
 
 `也可以这样写:`
 
@@ -172,7 +171,7 @@ public class HelloWorld{
 
 ![阿信][1]
 
-[1]:{{ "/asserts/img/post/2017-5-20/head.png" | prepend: site.baseurl }}
+[1]:{{ "/asserts/img/post/2017-5-20/head.jpg" | prepend: site.baseurl }}
 
 #### 八、表格写法
 
