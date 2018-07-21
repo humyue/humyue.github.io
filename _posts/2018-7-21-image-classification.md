@@ -3,7 +3,7 @@ layout: post
 title:  "超精简图像分类教程"
 date:   2018-07-21 8:00:54
 categories: Tensorflow
-tags: Tensorflow
+tags: Tensorflow Deep-Learning
 author: Humy
 ---
 * content
@@ -26,9 +26,11 @@ author: Humy
 打开`config.py`，具体设置如下所示：
 
 ![image.png]({{ "/asserts/img/post/2018-7-21/02.png" | prepend: site.baseurl }})
+
 设置好过后，运行`main.py`:
 
 ![运行结果]({{ "/asserts/img/post/2018-7-21/03.png" | prepend: site.baseurl }})
+
 这样，苹果和梨的两类数据就收集好了。
 
 #### 2.模型训练
