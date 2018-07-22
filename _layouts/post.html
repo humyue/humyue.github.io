@@ -32,14 +32,14 @@ layout: default
         
         <hr>
      
-       <!--  <div id="zanshang">
+        <div id="zanshang">
             <span>如果觉得我的文章对您有用，请随意赞赏。您的支持将鼓励我继续创作！</span>
             <div id="btn">
                 赞赏支持
             </div>
-        </div> -->
+        </div>
 
-      <!--   <div id="pay" class="none">
+        <div id="pay" class="none">
             <div class="qs">
                 <img src="{{ "/asserts/img/wchat.jpg " | prepend: site.baseurl }}" alt="微信">
                 <span>微信支付</span>
@@ -48,22 +48,50 @@ layout: default
                  <img src="{{ "/asserts/img/alipay.jpg " | prepend: site.baseurl }}" alt="支付宝">
                  <span>支付宝支付</span>
             </div>
-        </div> -->
+        </div>
         
         <script src="{{ "/asserts/js/jquery-1.7.2.min.js" | prepend: site.baseurl }}" charset="utf-8"></script>
 
         <script>
-            // $(function(){
-            //     $("#btn").toggle(
-            //         function(){
-            //             $("#pay").fadeIn("slow")
-            //         },
-            //         function(){
-            //              $("#pay").fadeOut("slow")
-            //         }
-            //     );
-            // })
+            $(function(){
+                $("#btn").toggle(
+                    function(){
+                        $("#pay").fadeIn("slow")
+                    },
+                    function(){
+                         $("#pay").fadeOut("slow")
+                    }
+                );
+            })
         </script>
+        
+        {% assign hasSimilar = '' %}
+        {% for post in site.related_posts %}
+            {% assign postHasSimilar = false %}
+            {% for tag in post.tags %}
+                {% for thisTag in page.tags %}
+                    {% if postHasSimilar == false and hasSimilar.size < 6 and post != page and tag == thisTag %}
+                        {% if hasSimilar.size == 0 %}
+                        <h2 id="similar_posts">相似文章</h2>
+                        <ul>
+                        {% endif %}
+                        <li class="relatedPost">
+                            <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}
+                            {% if post.series %}
+                                (Series: {{ post.series }})
+                            {% endif %}
+                            </a>
+                        </li>
+                        {% capture hasSimilar %}{{ hasSimilar }}*{% endcapture %}
+                        {% assign postHasSimilar = true %}
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+        {% endfor %}
+        {% if hasSimilar.size > 0 %}
+            </ul>
+        {% endif %}
+
 
         {% include previousAndNext.html %}
 
