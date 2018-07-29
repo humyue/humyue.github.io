@@ -1,0 +1,87 @@
+.page[book] {
+    a {
+        color: #666;
+        font-size:32px;
+        font-weight:bold;
+        transition: 0.5s ease;
+        &:hover {
+            color: #38b7ea;
+        }
+    }
+
+    .left {
+        >ul {
+            padding: 0;
+            >li {
+                float:left;
+                list-style: none;
+                padding:10px;
+                .book_img{
+                    width:24%;
+                    float:left;
+                    img{
+                        
+                        width:150px;
+                        height:225px;
+                        border-radius:5px;
+                    }
+                }
+                .description{
+                    color:#C5AC94;
+                    width:76%;
+                    height:225px;
+                    background:#242921;
+                    border-radius:5px;
+                
+                    padding:2px;
+                    float:left;
+                    >hr{
+                        border: 0;
+                        border:0.5px solid #FFFFFF;
+                        margin: 10px 0;
+                    }
+                    >p{
+                        color:#FFFFFF;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 770px) {
+    .page[book] {
+        .left {
+            >ul {
+                padding: 0px;
+                >li {
+                    margin:5px;
+                    list-style: none;
+                    .book_img{
+                        width:100%;
+                        img{
+                            width:150px;
+                            height:225px;
+                            border-radius:5px;
+                        }
+                    }
+                    .description{
+                        width:100%;
+                        color:#C5AC94;
+                        height:auto;
+                        background:#242921;
+                        border-radius:5px;
+                        padding:2px;
+                        >hr{
+                            border: 0;
+                            border:0.5px solid #FFFFFF;
+                            margin: 10px 0;
+                        }
+                        >p{
+                            color:#FFFFFF;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
