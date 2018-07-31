@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Window7下Tensorflow安装简述"
-date:   2017-07-12 16:30:54
+date:   2017-07-13 16:30:54
 categories: Tensorflow
 tags:  Tensorflow
 author: Humy
@@ -20,19 +20,23 @@ author: Humy
 `python.exe -m pip install --upgrade pip`
 
 3.安装cpu版本的Tensorflow
+
 ```
 pip install --upgrade https://storage.googleapis.com/tensorflow/windows/cpu/tensorflow-1.2.1-cp35-cp35m-win_amd64.whl
 ```
 网址最好在官网找最新的
 
 4.安装完成后在导入模块的时候
+
 `import tensorflow as tf`
+
 可能会找不到模块
 这是还需要下载下面的插件
 [插件下载地址](https://www.microsoft.com/en-us/download/details.aspx?id=53587)
 下载完成后就可以运行起来了
 
 5.测试
+
 ```
 >>>import tensorflow as tf
 >>>hello=tf.constant('Hello,TensorFlow!')
@@ -48,6 +52,7 @@ Hello,TensorFlow!
 1.假设前面Python环境已经装好了，pip也已经升级
 
 2.安装gpu版本的Tensorflow
+
 ```
 pip install --upgrade https://storage.googleapis.com/tensorflow/windows/gpu/tensorflow_gpu-1.2.1-cp35-cp35m-win_amd64.whl
 ```
@@ -64,10 +69,12 @@ pip install --upgrade https://storage.googleapis.com/tensorflow/windows/gpu/tens
 
 ③解压cudnn文件，解压目录如下所示
 
-![cuda解压目录]({{ "/asserts/img/post/2017-7-13/02.png" | prepend: site.baseurl }}
+![cuda解压目录]({{ "/asserts/img/post/2017-7-13/02.png" | prepend: site.baseurl }})
+
 **重点来了：将bin目录填入到path环境变量**
 
 4.测试
+
 ```
 import tensorflow as tf
 hello = tf.constant('Hello, TensorFlow!')
