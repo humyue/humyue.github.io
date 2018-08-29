@@ -18,10 +18,12 @@ type: page
 
 ## 联系我
 
-* 企鹅：1449902783
 * 邮箱：1449902783@qq.com
-* 新浪微博：[click here](http://weibo.com/{{site.weibo_username}}){:target="_blank"}
 * 简书：[click here](https://www.jianshu.com/u/ef21221a874d){:target="_blank"}
+
+扫描下方二维码，关注我的微信公众号^-^
+
+![]({{ "/asserts/img/gongzhonghao.jpg" | prepend: site.baseurl }})
 
 ## 评论
 {% include comments.html %}
