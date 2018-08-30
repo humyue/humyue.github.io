@@ -19,7 +19,6 @@ type: page
 ## 联系我
 
 * 邮箱：1449902783@qq.com
-* 简书：[click here](https://www.jianshu.com/u/ef21221a874d){:target="_blank"}
 
 扫描下方二维码，关注我的微信公众号^-^
 
