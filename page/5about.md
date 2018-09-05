@@ -18,9 +18,9 @@ type: page
 
 ## 联系我
 
-* 邮箱：1449902783@qq.com
+* 邮箱：huming.yue@foxmail.com
 
-扫描下方二维码，关注我的微信公众号^-^
+* 扫描下方二维码，关注我的微信公众号^-^
 
 ![]({{ "/asserts/img/gongzhonghao.jpg" | prepend: site.baseurl }})
 
