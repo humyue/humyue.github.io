@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "超精简图像分类教程"
-date:   2018-07-21 8:00:54
+date:   2018-09-21 8:00:54
 categories: Tensorflow
 tags: Tensorflow Deep-Learning
 author: Humy
@@ -21,15 +21,15 @@ author: Humy
 首先，大家要准备好数据集，至少两类。没有也没关系，博主已经写了一个小程序，帮你们自动去收集。
 程序结构如下所示：
 
-![image.png]({{ "/asserts/img/post/2018-7-21/01.png" | prepend: site.baseurl }})
+![image.png]({{ "/asserts/img/post/2018-9-21/01.png" | prepend: site.baseurl }})
 
 打开`config.py`，具体设置如下所示：
 
-![image.png]({{ "/asserts/img/post/2018-7-21/02.png" | prepend: site.baseurl }})
+![image.png]({{ "/asserts/img/post/2018-9-21/02.png" | prepend: site.baseurl }})
 
 设置好过后，运行`main.py`:
 
-![运行结果]({{ "/asserts/img/post/2018-7-21/03.png" | prepend: site.baseurl }})
+![运行结果]({{ "/asserts/img/post/2018-9-21/03.png" | prepend: site.baseurl }})
 
 这样，苹果和梨的两类数据就收集好了。
 
@@ -37,7 +37,7 @@ author: Humy
 
 模型训练和测试只需要用到两个代码文件，如下所示：
 
-![image.png]({{ "/asserts/img/post/2018-7-21/04.png" | prepend: site.baseurl }})
+![image.png]({{ "/asserts/img/post/2018-9-21/04.png" | prepend: site.baseurl }})
 
 - `retrain.py`：训练代码
 - `test.py`：识别代码
@@ -56,7 +56,7 @@ author: Humy
 
 设置完，接着就可以运行`retrain.py`，如果没出错的话，会出现刚刚设置的路径（code除外，这个目录是我存放代码的路径）
 
-![image.png]({{ "/asserts/img/post/2018-7-21/05.png" | prepend: site.baseurl }})
+![image.png]({{ "/asserts/img/post/2018-9-21/05.png" | prepend: site.baseurl }})
 
 #### 3.模型测试
 
@@ -77,10 +77,10 @@ for root,dirs,files in os.walk('F:\\Test\\code\\test_image'):
 
 `F:\\Test\\code\\test_image`路径下只放了下面这张图片：
 
-![u=2443737649,4181581860&fm=200&gp=0.jpg]({{ "/asserts/img/post/2018-7-21/06.jpg" | prepend: site.baseurl }})
+![u=2443737649,4181581860&fm=200&gp=0.jpg]({{ "/asserts/img/post/2018-9-21/06.jpg" | prepend: site.baseurl }})
 
 运行结果如下所示：
 
-![image.png]({{ "/asserts/img/post/2018-7-21/07.png" | prepend: site.baseurl }})
+![image.png]({{ "/asserts/img/post/2018-9-21/07.png" | prepend: site.baseurl }})
 
 所以，简单的图像识别实例就完成了。
