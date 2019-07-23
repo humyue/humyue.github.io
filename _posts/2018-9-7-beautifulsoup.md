@@ -9,10 +9,10 @@ author: Humy
 * content
 {:toc}
 
+
+
+
 **直接进入正题吧，之前只会用Python简单的字符串操作来爬取网络上的内容，这对结构不明显网页很难匹配，然后花了一下午时间看了一下[BeautifulSoup中文手册](http://docs.pythontab.com/beautifulsoup4/)，结合老师布置给我的一个任务，写了一个爬取[精美图片库](http://www.85814.com/zhiwu/)植物图片的小程序。效果不错，现在这里记录下来。**
-
-
-
 
 #### 1.安装BeautifulSoup
 
