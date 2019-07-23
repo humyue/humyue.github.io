@@ -18,7 +18,7 @@ type: page
 
 ## 联系我
 
-* 邮箱：huming.yue@foxmail.com
+* 合作邮箱：huming.yue@foxmail.com
 
 * 扫描下方二维码，关注我的微信公众号^-^
 
