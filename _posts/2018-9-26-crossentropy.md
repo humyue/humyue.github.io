@@ -161,5 +161,7 @@ m为当前batch的样本数
 **参考：**
 
 [https://www.zhihu.com/question/65288314/answer/244557337](https://www.zhihu.com/question/65288314/answer/244557337) 
+
 [https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence](https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence) 
+
 [https://jamesmccaffrey.wordpress.com/2013/11/05/why-you-should-use-cross-entropy-error-instead-of-classification-error-or-mean-squared-error-for-neural-network-classifier-training/](https://jamesmccaffrey.wordpress.com/2013/11/05/why-you-should-use-cross-entropy-error-instead-of-classification-error-or-mean-squared-error-for-neural-network-classifier-training/)

@@ -9,10 +9,14 @@ author: Humy
 * content
 {:toc}
 
+<center class>
+    <img src="{{ "/asserts/img/cover/20.jpg" | prepend: site.baseurl }}"/>
+</center>
+
+
+
+
 > 上一篇文章介绍了windows系统上Tensorflow环境的搭建，但是笔者电脑配置不高，运行一些demo cpu直接爆表，所以目标转向了阿里云的服务器（ps:笔者不是土豪，服务器是老师的），这里记录下搭建过程中遇到的坑，不是一点点啊~~~
-
-
-
 
 #### 目录
 

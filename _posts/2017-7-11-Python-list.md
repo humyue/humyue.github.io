@@ -9,10 +9,14 @@ author: Humy
 * content
 {:toc}
 
+<center class>
+    <img src="{{ "/asserts/img/cover/21.jpg" | prepend: site.baseurl }}"/>
+</center>
+
+
+
+
 > 本文主要记录一下笔者学习Python过程中遇到的一些语法，便于以后翻阅
-
-
-
 
 ### 1.列表
 #### 1.1创建列表

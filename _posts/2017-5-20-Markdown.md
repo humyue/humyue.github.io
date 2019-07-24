@@ -9,6 +9,13 @@ author: Humy
 * content
 {:toc}
 
+<center class>
+    <img src="{{ "/asserts/img/cover/22.jpeg" | prepend: site.baseurl }}"/>
+</center>
+
+
+
+
 #### 一、标题写法
 
 ```
@@ -21,9 +28,6 @@ author: Humy
 ```
 
 *注：最好#和标题之间保留一个空格*
-
-
-
 
 `效果如下：`
 # 一级标题

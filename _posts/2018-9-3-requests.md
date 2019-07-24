@@ -9,12 +9,16 @@ author: Humy
 * content
 {:toc}
 
+<center class>
+    <img src="{{ "/asserts/img/cover/09.jpeg" | prepend: site.baseurl }}"/>
+</center>
+
+
+
+
 *本文为笔者根据Python静觅教程记录笔记，仅供学习使用*
 
 ### 1.实例引入
-
-
-
 
 ```
 import requests
