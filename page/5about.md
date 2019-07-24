@@ -10,11 +10,13 @@ type: page
 {:toc}
 
 
-![阿信]({{ "/asserts/img/head.jpg" | prepend: site.baseurl }})
+![阿信]({{ "/asserts/img/head1.png" | prepend: site.baseurl }})
 
-##### 在读研究生。
-##### 热爱生活，喜欢运动。
-##### 敲代码的人中最会唱歌的，唱歌的人中最会敲代码的。
+毕业渣硕
+
+唱得了歌，敲得了代码，偶尔装文艺弹弹琴，看看书
+
+并一直在变瘦的路上挣扎！！！
 
 ## 联系我
 
