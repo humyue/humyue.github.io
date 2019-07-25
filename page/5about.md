@@ -10,7 +10,7 @@ type: page
 {:toc}
 
 
-![阿信]({{ "/asserts/img/head1.png" | prepend: site.baseurl }})
+![阿信]({{ "/asserts/img/head1.jpg" | prepend: site.baseurl }})
 
 毕业渣硕
 
