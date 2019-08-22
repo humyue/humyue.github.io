@@ -10,7 +10,7 @@ author: Humy
 {:toc}
 
 <center class>
-    <img src="{{ "/asserts/img/cover/20.jpg" | prepend: site.baseurl }}"/>
+    <img src="{{ "/asserts/img/cover/04.jpg" | prepend: site.baseurl }}"/>
 </center>
 
 
