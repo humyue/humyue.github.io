@@ -236,6 +236,16 @@
 }
 @media screen and (max-width: 770px) {
     .page[index] {
+       a {
+            color: #666;
+            font-size:17px;
+            font-weight:bold;
+            transition: 0.5s ease;
+            &:hover {
+                color: #38b7ea;
+             }
+        }
+
         .left>ul li {
             h2 {
                 font-size: 22px;
