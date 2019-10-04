@@ -251,7 +251,7 @@
 
                 > li {
                     list-style: none;
-                    padding: 15px;
+                    padding: 10px;
                     margin-bottom: 5px;
                 }
             }
@@ -275,5 +275,10 @@
                 }
             }
         }
+      .description .tag_list {
+          width: 80%;
+          margin: 20px auto;
+          text-align: center;
+      }
     }
 }
