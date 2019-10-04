@@ -245,7 +245,17 @@
                 color: #38b7ea;
              }
         }
+        .left {
+            > ul {
+                padding: 0;
 
+                > li {
+                    list-style: none;
+                    padding: 15px;
+                    margin-bottom: 5px;
+                }
+            }
+        }
         .left>ul li {
             h2 {
                 font-size: 22px;
