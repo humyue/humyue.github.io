@@ -25,6 +25,10 @@ type: page
 
 ## 联系我
 
+* 我的简书：[蒙奇奇路西](https://www.jianshu.com/u/ef21221a874d){:target="_blank"}
+
+* 我的Bilibili：[尤克里里翻唱](https://space.bilibili.com/171804021/channel/detail?cid=82518){:target="_blank"}
+
 * 合作邮箱：huming.yue@foxmail.com
 
 * 扫描下方二维码，关注我的微信公众号^-^
