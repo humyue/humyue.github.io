@@ -7,7 +7,7 @@
 
 # Site settings
 title: 今天你PY了吗
-name: Hu Mingyue
+name: Ming
 brief-intro: Deep Learning & Machine Learning
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://humyue.github.io" # the base hostname & protocol for your site
