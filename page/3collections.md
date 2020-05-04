@@ -9,13 +9,19 @@ type: page
 * content
 {:toc}
 
-## 友情链接
+## 收藏
 
-[莫烦Python](https://morvanzhou.github.io/){:target="_blank"} &nbsp;&nbsp;&nbsp; [静觅](https://cuiqingcai.com/){:target="_blank"} &nbsp;&nbsp;&nbsp; [红色石头](http://redstonewill.com/){:target="_blank"}
+* [力扣](https://leetcode-cn.com/){:target="_blank"}
+* [Pytorch中文网 - 端到端深度学习框架平台](https://ptorch.com/){:target="_blank"}
+* [PyTorch官方教程中文版 - PyTorch官方教程中文版](http://pytorch.panchuang.net/){:target="_blank"}
+* [动手学深度学习 — 动手学深度学习 文档](http://zh.gluon.ai/){:target="_blank"}
+* [Tensorflow中文网](https://tensorflow.google.cn/){:target="_blank"}
+* [OpenCV-Python中文教程](https://www.kancloud.cn/aollo/aolloopencv#/catalog){:target="_blank"}
+* [Python+OpenCV实用教程](http://codec.wang/opencv-python/){:target="_blank"}
 
-<center class="half">
-    <img src="{{ "/asserts/img/cover/04.jpg" | prepend: site.baseurl }}"/>
-</center>
+
+
+
 
 
 

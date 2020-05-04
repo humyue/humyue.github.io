@@ -9,6 +9,10 @@ author: Humy
 * content
 {:toc}
 
+
+
+
+
 >一、安装 cpu版本的tensorflow
 
 1.首先安装python环境，建议安装python3.5版本的

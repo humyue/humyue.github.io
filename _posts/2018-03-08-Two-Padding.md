@@ -9,6 +9,11 @@ author: Humy
 * content
 {:toc}
 
+
+
+
+
+
 **当我们计算卷积池化后的图像尺寸时，需要注意“VALID”和“SAME”两种Padding对应的输出尺寸计算方式不一样，下面就来说说具体的计算方式**
 
 * 当Padding为“VALID”

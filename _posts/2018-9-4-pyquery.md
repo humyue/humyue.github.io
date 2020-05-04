@@ -9,6 +9,11 @@ author: Humy
 * content
 {:toc}
 
+
+
+
+
+
 *本文为笔者根据Python静觅教程记录笔记，仅供学习使用*
 
 >PyQuery解析库跟BeautifulSoup解析库一样都是方便我们解析文档的，但是PyQuery解析库跟JS的框架JQuery很相似，如果之前接触过JQuery的话，再学习这个就没有什么学习成本了。

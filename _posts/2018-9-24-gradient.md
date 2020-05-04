@@ -9,6 +9,11 @@ author: Humy
 * content
 {:toc}
 
+
+
+
+
+
 **前言：深度神经网络中，我们听到的最多的词就是梯度消失（gradient vanishing ）和梯度爆炸（gradient exploding），那么这两个词到底表示什么意思呢？今天就让我们来一探究竟。**
 
 ##### 一.梯度消失与梯度爆炸问题简述
