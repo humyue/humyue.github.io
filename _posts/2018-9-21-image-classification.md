@@ -9,13 +9,6 @@ author: Humy
 * content
 {:toc}
 
-<center class>
-    <img src="{{ "/asserts/img/cover/04.jpg" | prepend: site.baseurl }}"/>
-</center>
-
-
-
-
 **学习深度学习有一段时间了，今天教给大家自己学会做一个图像识别的实例**
 
 在正式开始之前，首先大家要自己动手去搭建Tensorflow环境(gpu,cpu版均可)，如何搭建请参考我前面的教程。环境搭好过后，就可以往下看了：

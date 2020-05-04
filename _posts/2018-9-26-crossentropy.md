@@ -9,13 +9,6 @@ author: Humy
 * content
 {:toc}
 
-<center class>
-    <img src="{{ "/asserts/img/cover/03.jpg" | prepend: site.baseurl }}"/>
-</center>
-
-
-
-
 本文转载自：https://blog.csdn.net/tsyccnh/article/details/79163834
 
 **关于交叉熵在loss函数中使用的理解**

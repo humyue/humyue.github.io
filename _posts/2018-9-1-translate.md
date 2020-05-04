@@ -9,13 +9,6 @@ author: Humy
 * content
 {:toc}
 
-<center class>
-    <img src="{{ "/asserts/img/cover/03.jpg" | prepend: site.baseurl }}"/>
-</center>
-
-
-
-
 *注：本文是根据小甲鱼的《零基础入门学习Python》一书关于爬虫实现有道翻译章节所做的的一个修改，有道翻译官方对有些参数做了“手脚“所以实现起来不那么容易了，所以我选择百度翻译作为新手的一个入门学习*
 
 ## 1.首先需要导入urllib包的request模块

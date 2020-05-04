@@ -9,13 +9,6 @@ author: Humy
 * content
 {:toc}
 
-<center class>
-    <img src="{{ "/asserts/img/cover/02.jpg" | prepend: site.baseurl }}"/>
-</center>
-
-
-
-
 **今天心血来潮,在win7系统上装了一个Ubuntu双系统,下面记录一些基本的设置命令,持续更新...大神勿喷**
 
 首先，简单介绍一下安装过程

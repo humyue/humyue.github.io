@@ -9,13 +9,6 @@ author: Humy
 * content
 {:toc}
 
-<center class>
-    <img src="{{ "/asserts/img/cover/03.jpg" | prepend: site.baseurl }}"/>
-</center>
-
-
-
-
 >一、安装 cpu版本的tensorflow
 
 1.首先安装python环境，建议安装python3.5版本的

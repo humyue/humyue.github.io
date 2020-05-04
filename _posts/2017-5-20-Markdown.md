@@ -9,13 +9,6 @@ author: Humy
 * content
 {:toc}
 
-<center class>
-    <img src="{{ "/asserts/img/cover/06.jpg" | prepend: site.baseurl }}"/>
-</center>
-
-
-
-
 #### 一、标题写法
 
 ```
