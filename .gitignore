@@ -1,6 +1,19 @@
-_site
-.sass-cache
-.jekyll-metadata
+# 系统文件
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 编辑器
 .vscode
 .idea
-.DS_Store
+
+# Hugo 构建产物与缓存
+public/
+resources/
+.hugo_build.lock
+
+# 日志
+*.log
+
+# 本地工具截图（browser agent 等）
+.screenshots/

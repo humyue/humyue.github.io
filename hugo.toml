@@ -1,0 +1,94 @@
+baseURL = 'https://humyue.github.io/'
+title = "Mingy'Log"
+theme = 'PaperMod'
+
+locale = 'zh-CN'
+defaultContentLanguage = 'zh'
+hasCJKLanguage = true
+enableRobotsTXT = true
+enableEmoji = true
+summaryLength = 120
+
+[pagination]
+  pagerSize = 10
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  section = ["HTML", "RSS"]
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+    guessSyntax = true
+    lineNos = false
+  [markup.goldmark.renderer]
+    unsafe = true
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
+
+[params]
+  description = '胡明越的博客，记录深度学习、大模型Agent的学习笔记。'
+  keywords = ['胡明越', 'Humingyue', 'LLM','RAG','深度学习', 'Python', 'Agent']
+  author = 'Humy'
+  DateFormat = '2006-01-02'
+  defaultTheme = 'auto'
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = true
+  ShowRssButtonInSectionTermList = true
+  ShowToc = true
+  TocOpen = false
+  ShowFullTextinRSS = false
+  disableSpecial1stPost = false
+  disableScrollToTop = false
+  disableAnchoredHeadings = false
+  hideSummary = false
+  comments = false
+  
+  [params.homeInfoParams]
+    Title = '你好，我是 Mingy'
+    Content = '这里记录深度学习、大模型Agent的学习笔记。偶尔也写点乱七八糟的东西。'
+
+  [params.assets]
+    favicon = 'favicon.ico'
+
+  [[params.socialIcons]]
+    name = 'github'
+    url = 'https://github.com/humyue'
+
+  [[params.socialIcons]]
+    name = 'bilibili'
+    url = 'https://space.bilibili.com/171804021'
+
+   [[params.socialIcons]]
+    name = 'email'
+    url = 'mailto:huming.yue@foxmail.com'
+
+[[menu.main]]
+  identifier = 'search'
+  name = '搜索'
+  url = '/search/'
+  weight = 5
+
+[[menu.main]]
+  identifier = 'archives'
+  name = '归档'
+  url = '/archives/'
+  weight = 10
+
+[[menu.main]]
+  identifier = 'tags'
+  name = '标签'
+  url = '/tags/'
+  weight = 20
+
+
+[[menu.main]]
+  identifier = 'about'
+  name = '关于'
+  url = '/about/'
+  weight = 40
