@@ -55,6 +55,7 @@ summaryLength = 120
 
   [params.assets]
     favicon = 'favicon.ico'
+    theme_color = '#0e1116'
 
   [[params.socialIcons]]
     name = 'github'
