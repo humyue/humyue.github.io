@@ -48,8 +48,8 @@ author: "Mingy"
 
 **研究动机主要包括两点：**
 
-1. <font style="color:rgb(25, 27, 31);">当前的RAG是为了解决那些能够在文本片段中找到答案的问答任务而设计的，对于</font>[<font style="color:rgb(25, 27, 31);">QFS</font>](https://zhida.zhihu.com/search?content_id=246169290&content_type=Article&match_order=1&q=QFS&zhida_source=entity)<font style="color:rgb(25, 27, 31);"> </font><font style="color:rgb(25, 27, 31);">(query focus summarization，使用自然语言对内容进行概括而非单纯地生成文本片段)任务不一定适用。</font>
-2. <font style="color:rgb(25, 27, 31);">对于那些针对整个数据集进行提问的场景 (如：“这个数据集主要讲了哪些主要内容？”)，原有的RAG方法显然无法将所有数据放入上下文中并让大模型总结；即便能放入上下文窗口，由于lost in the middle (另一篇探索上下文信息丢失的论文)现象的存在，LLM总结效果不一定好。</font>
+1. 当前的RAG是为了解决那些能够在文本片段中找到答案的问答任务而设计的，对于[QFS](https://zhida.zhihu.com/search?content_id=246169290&content_type=Article&match_order=1&q=QFS&zhida_source=entity)(query focus summarization，使用自然语言对内容进行概括而非单纯地生成文本片段)任务不一定适用。
+2. 对于那些针对整个数据集进行提问的场景 (如：“这个数据集主要讲了哪些主要内容？”)，原有的RAG方法显然无法将所有数据放入上下文中并让大模型总结；即便能放入上下文窗口，由于lost in the middle (另一篇探索上下文信息丢失的论文)现象的存在，LLM总结效果不一定好。
 
 
 
@@ -172,12 +172,12 @@ graphrag init --root ./ragtest4
 <!-- 这是一张图片，ocr 内容为： -->
 ![](/img/post/graphrag-lightrag/07.png)
 
-+ **<font style="color:rgb(31, 35, 40);">entity_extraction：</font>**<font style="color:rgb(31, 35, 40);"> </font><font style="color:rgb(31, 35, 40);">用于从自然语言文本抽取实体与关系。</font>
-+ **<font style="color:rgb(31, 35, 40);">summarize_descriptions：</font>**<font style="color:rgb(31, 35, 40);"> </font><font style="color:rgb(31, 35, 40);">用于生成实体与关系的描述性文本。</font>
-+ **<font style="color:rgb(31, 35, 40);">community_report：</font>**<font style="color:rgb(31, 35, 40);"> </font><font style="color:rgb(31, 35, 40);">用于生成社区的摘要等报告信息。</font>
-+ **<font style="color:rgb(31, 35, 40);">claim_extraction：</font>**<font style="color:rgb(31, 35, 40);"> 这是一个可选动作，用来生成一些实体的辅助声明 （由 GRAPHRAG_CLAIM_EXTRACTION_ENABLED 参数控制）,这里忽略。</font>
++ **entity_extraction：**用于从自然语言文本抽取实体与关系。
++ **summarize_descriptions：**用于生成实体与关系的描述性文本。
++ **community_report：**用于生成社区的摘要等报告信息。
++ **claim_extraction：** 这是一个可选动作，用来生成一些实体的辅助声明 （由 GRAPHRAG_CLAIM_EXTRACTION_ENABLED 参数控制）,这里忽略。
 
-**示例：****<font style="color:rgb(31, 35, 40);">entity_extraction.txt</font>**
+**示例：entity_extraction.txt**
 
 <!-- 这是一张图片，ocr 内容为： -->
 ![](/img/post/graphrag-lightrag/08.png)
@@ -204,45 +204,45 @@ graphrag index --root ./ragtest4
 <!-- 这是一张图片，ocr 内容为： -->
 ![](/img/post/graphrag-lightrag/10.png)
 
-出现以上提示，说明构建成功。12000字，大概构建了4分钟。<font style="color:rgba(0, 0, 0, 0.87);">构建成功后，各知识图谱相关数据集都保存在output文件夹中：</font>
+出现以上提示，说明构建成功。12000字，大概构建了4分钟。构建成功后，各知识图谱相关数据集都保存在output文件夹中：
 
 <!-- 这是一张图片，ocr 内容为： -->
 ![](/img/post/graphrag-lightrag/11.png)
 
 包含：
 
-1. **<font style="color:rgba(0, 0, 0, 0.87);">实体表（Nodes Table）</font>**
-    - **<font style="color:rgba(0, 0, 0, 0.87);">文件名</font>**<font style="color:rgba(0, 0, 0, 0.87);">：</font>`create_final_nodes.parquet`
-    - **<font style="color:rgba(0, 0, 0, 0.87);">内容</font>**<font style="color:rgba(0, 0, 0, 0.87);">：知识图谱中的实体节点（例如：人、地点、组织）。</font>
-    - **<font style="color:rgba(0, 0, 0, 0.87);">包含信息</font>**<font style="color:rgba(0, 0, 0, 0.87);">：</font>
-        * <font style="color:rgba(0, 0, 0, 0.87);">实体的名称（如 "John Doe"）。</font>
-        * <font style="color:rgba(0, 0, 0, 0.87);">实体的类别（如 "PERSON", "ORGANIZATION", "LOCATION"）。</font>
-        * <font style="color:rgba(0, 0, 0, 0.87);">与社区相关的信息（如实体所属的社区）。</font>
-        * <font style="color:rgba(0, 0, 0, 0.87);">实体的度数（degree），表示该实体在图谱中的连接数。</font>
-2. **<font style="color:rgba(0, 0, 0, 0.87);">关系表（Relationships Table）</font>**
-    - **<font style="color:rgba(0, 0, 0, 0.87);">文件名</font>**<font style="color:rgba(0, 0, 0, 0.87);">：</font>`create_final_relationships.parquet`
-    - **<font style="color:rgba(0, 0, 0, 0.87);">内容</font>**<font style="color:rgba(0, 0, 0, 0.87);">：知识图谱中实体之间的关系（即图谱的边）。</font>
-    - **<font style="color:rgba(0, 0, 0, 0.87);">包含信息</font>**<font style="color:rgba(0, 0, 0, 0.87);">：</font>
-        * <font style="color:rgba(0, 0, 0, 0.87);">两个实体之间的关系描述（例如 "works for", "lives in"）。</font>
-        * <font style="color:rgba(0, 0, 0, 0.87);">关系的强度（数值化，用于衡量关系的显著性或重要性）。</font>
-3. **<font style="color:rgba(0, 0, 0, 0.87);">嵌入向量表（Entity Embedding Table）</font>**
-    - **<font style="color:rgba(0, 0, 0, 0.87);">文件名</font>**<font style="color:rgba(0, 0, 0, 0.87);">：</font>`create_final_entities.parquet`
-    - **<font style="color:rgba(0, 0, 0, 0.87);">内容</font>**<font style="color:rgba(0, 0, 0, 0.87);">：实体的语义嵌入，用于表示实体的语义信息。</font>
-    - **<font style="color:rgba(0, 0, 0, 0.87);">用途</font>**<font style="color:rgba(0, 0, 0, 0.87);">：支持语义搜索（通过嵌入计算实体之间的相似性）。</font>
-4. **<font style="color:rgba(0, 0, 0, 0.87);">社区报告表（Community Reports Table）</font>**
-    - **<font style="color:rgba(0, 0, 0, 0.87);">文件名</font>**<font style="color:rgba(0, 0, 0, 0.87);">：</font>`create_final_community_reports.parquet`
-    - **<font style="color:rgba(0, 0, 0, 0.87);">内容</font>**<font style="color:rgba(0, 0, 0, 0.87);">：社区的摘要信息。</font>
-    - **<font style="color:rgba(0, 0, 0, 0.87);">用途</font>**<font style="color:rgba(0, 0, 0, 0.87);">：支持全局搜索（通过社区信息回答关于数据集整体的问题）。</font>
-5. **<font style="color:rgba(0, 0, 0, 0.87);">文本单元表（Text Units Table）</font>**
-    - **<font style="color:rgba(0, 0, 0, 0.87);">文件名</font>**<font style="color:rgba(0, 0, 0, 0.87);">：</font>`create_final_text_units.parquet`
-    - **<font style="color:rgba(0, 0, 0, 0.87);">内容</font>**<font style="color:rgba(0, 0, 0, 0.87);">：被切分的原始文本单元（TextUnits）。</font>
-    - **<font style="color:rgba(0, 0, 0, 0.87);">用途</font>**<font style="color:rgba(0, 0, 0, 0.87);">：将知识图谱和原始文本结合，为 LLM 提供上下文支持。</font>
-6. **<font style="color:rgba(0, 0, 0, 0.87);">社区表（Community Table）</font>**
-    - **<font style="color:rgba(0, 0, 0, 0.87);">文件名</font>**<font style="color:rgba(0, 0, 0, 0.87);">：</font>`create_final_Communities.parquet`
-    - **<font style="color:rgba(0, 0, 0, 0.87);">内容</font>**<font style="color:rgba(0, 0, 0, 0.87);">：每个社区基本情况。</font>
-7. **<font style="color:rgba(0, 0, 0, 0.87);">文件表（Documents Table）</font>**
-    - **<font style="color:rgba(0, 0, 0, 0.87);">文件名</font>**<font style="color:rgba(0, 0, 0, 0.87);">：</font>`create_final_documents.parquet`
-    - **<font style="color:rgba(0, 0, 0, 0.87);">内容</font>**<font style="color:rgba(0, 0, 0, 0.87);">：用于记录所有参与知识图谱构建的文件情况。</font>
+1. **实体表（Nodes Table）**
+    - **文件名**：`create_final_nodes.parquet`
+    - **内容**：知识图谱中的实体节点（例如：人、地点、组织）。
+    - **包含信息**：
+        * 实体的名称（如 "John Doe"）。
+        * 实体的类别（如 "PERSON", "ORGANIZATION", "LOCATION"）。
+        * 与社区相关的信息（如实体所属的社区）。
+        * 实体的度数（degree），表示该实体在图谱中的连接数。
+2. **关系表（Relationships Table）**
+    - **文件名**：`create_final_relationships.parquet`
+    - **内容**：知识图谱中实体之间的关系（即图谱的边）。
+    - **包含信息**：
+        * 两个实体之间的关系描述（例如 "works for", "lives in"）。
+        * 关系的强度（数值化，用于衡量关系的显著性或重要性）。
+3. **嵌入向量表（Entity Embedding Table）**
+    - **文件名**：`create_final_entities.parquet`
+    - **内容**：实体的语义嵌入，用于表示实体的语义信息。
+    - **用途**：支持语义搜索（通过嵌入计算实体之间的相似性）。
+4. **社区报告表（Community Reports Table）**
+    - **文件名**：`create_final_community_reports.parquet`
+    - **内容**：社区的摘要信息。
+    - **用途**：支持全局搜索（通过社区信息回答关于数据集整体的问题）。
+5. **文本单元表（Text Units Table）**
+    - **文件名**：`create_final_text_units.parquet`
+    - **内容**：被切分的原始文本单元（TextUnits）。
+    - **用途**：将知识图谱和原始文本结合，为 LLM 提供上下文支持。
+6. **社区表（Community Table）**
+    - **文件名**：`create_final_Communities.parquet`
+    - **内容**：每个社区基本情况。
+7. **文件表（Documents Table）**
+    - **文件名**：`create_final_documents.parquet`
+    - **内容**：用于记录所有参与知识图谱构建的文件情况。
 
 
 
@@ -260,9 +260,9 @@ documents_df
 
 `create_final_documents.parquet`保存文档内容，有个文档生成几行内容，每一行代表一个文档。
 
-+ `title`<font style="color:rgba(0, 0, 0, 0.87);">: 文档标题</font>
-+ `text`<font style="color:rgba(0, 0, 0, 0.87);">: 文档内容</font>
-+ `text unit ids`<font style="color:rgba(0, 0, 0, 0.87);">: 文档包含的文本单元id列表</font>
++ `title`: 文档标题
++ `text`: 文档内容
++ `text unit ids`: 文档包含的文本单元id列表
 
 （二）文本单元表`create_final_text_units.parquet`
 
@@ -271,32 +271,32 @@ documents_df
 
 将所有文档内容进行切块，按照1200token进行切分。
 
-+ `text`<font style="color:rgba(0, 0, 0, 0.87);">: 文本单元内容</font>
-+ `n_tokens`<font style="color:rgba(0, 0, 0, 0.87);">: token数量</font>
-+ `document_ids`<font style="color:rgba(0, 0, 0, 0.87);">: 所属文档id</font>
-+ `entitys_ids`<font style="color:rgba(0, 0, 0, 0.87);">: 文本单元包含的实体id列表</font>
-+ `relationship_ids`<font style="color:rgba(0, 0, 0, 0.87);">: 文本单元包含的关系id列表</font>
++ `text`: 文本单元内容
++ `n_tokens`: token数量
++ `document_ids`: 所属文档id
++ `entitys_ids`: 文本单元包含的实体id列表
++ `relationship_ids`: 文本单元包含的关系id列表
 
 （三）实体嵌入表`create_final_entities.parquet`
 
 <!-- 这是一张图片，ocr 内容为： -->
 ![](/img/post/graphrag-lightrag/14.png)
 
-+ `title`<font style="color:rgba(0, 0, 0, 0.87);">: 实体名称</font>
-+ `type`<font style="color:rgba(0, 0, 0, 0.87);">: 实体类型</font>
-+ `description`<font style="color:rgba(0, 0, 0, 0.87);">: 实体描述</font>
++ `title`: 实体名称
++ `type`: 实体类型
++ `description`: 实体描述
 
 （四）实体表`create_final_nodes.parquet`
 
 <!-- 这是一张图片，ocr 内容为： -->
 ![](/img/post/graphrag-lightrag/15.png)
 
-+ `id`<font style="color:rgba(0, 0, 0, 0.87);">: 每个实体的唯一标识符，可以是数字或字符串。</font>
-+ `human_readable_id`<font style="color:rgba(0, 0, 0, 0.87);">: 人类可读的标识符，方便理解。</font>
-+ `title`<font style="color:rgba(0, 0, 0, 0.87);">: 实体的标题或名称（如文本中的人物、书籍名等）。</font>
-+ `community`<font style="color:rgba(0, 0, 0, 0.87);">: 实体所属的社区编号（我们假设所有实体目前都在社区-，后续聚类会更新）。</font>
-+ `level`<font style="color:rgba(0, 0, 0, 0.87);">: 假设目前所有实体的层级为-，后续会根据聚类结果填充。</font>
-+ `degree`<font style="color:rgba(0, 0, 0, 0.87);">: 假设实体之间的初步关系较少，因此度数比较低。</font>
++ `id`: 每个实体的唯一标识符，可以是数字或字符串。
++ `human_readable_id`: 人类可读的标识符，方便理解。
++ `title`: 实体的标题或名称（如文本中的人物、书籍名等）。
++ `community`: 实体所属的社区编号（我们假设所有实体目前都在社区-，后续聚类会更新）。
++ `level`: 假设目前所有实体的层级为-，后续会根据聚类结果填充。
++ `degree`: 假设实体之间的初步关系较少，因此度数比较低。
 
 
 
@@ -305,45 +305,45 @@ documents_df
 <!-- 这是一张图片，ocr 内容为： -->
 ![](/img/post/graphrag-lightrag/16.png)
 
-+ `source`：<font style="color:rgba(0, 0, 0, 0.87);">头实体。</font>
-+ `target`：<font style="color:rgba(0, 0, 0, 0.87);">尾实体。</font>
-+ `description`：<font style="color:rgba(0, 0, 0, 0.87);">关系的描述</font>
-+ `weight`：<font style="color:rgba(0, 0, 0, 0.87);">两个实体之间的关系紧密程度，通过提示词进行打分</font>
-+ `combined_degree`：<font style="color:rgba(0, 0, 0, 0.87);">两个实体度数相加</font>
++ `source`：头实体。
++ `target`：尾实体。
++ `description`：关系的描述
++ `weight`：两个实体之间的关系紧密程度，通过提示词进行打分
++ `combined_degree`：两个实体度数相加
 
 （六）社区表`create_final_Communities.parquet`
 
 <!-- 这是一张图片，ocr 内容为： -->
 ![](/img/post/graphrag-lightrag/17.png)
 
-+ `community`：<font style="color:rgba(0, 0, 0, 0.87);">社区的编号，代表社区的分类或标识。</font>
-+ `level`：<font style="color:rgba(0, 0, 0, 0.87);">社区层级，表示社区的聚类粒度。较低的值表示更抽象的层级，较高的值表示更具体的细分社区。</font>
-+ `title`：<font style="color:rgba(0, 0, 0, 0.87);">社区的全称。</font>
-+ `entitys_ids`<font style="color:rgba(0, 0, 0, 0.87);">: 社区包含的实体id列表</font>
-+ `relationship_ids`<font style="color:rgba(0, 0, 0, 0.87);">: 社区包含的关系id列表</font>
-+ `text_unit_ids`<font style="color:rgba(0, 0, 0, 0.87);">: 社区包含的文本单元id列表</font>
-+ `period`：<font style="color:rgba(0, 0, 0, 0.87);">社区生成的时间戳。</font>
-+ `size`**：**<font style="color:rgba(0, 0, 0, 0.87);">社区的大小，实体个数。</font>
++ `community`：社区的编号，代表社区的分类或标识。
++ `level`：社区层级，表示社区的聚类粒度。较低的值表示更抽象的层级，较高的值表示更具体的细分社区。
++ `title`：社区的全称。
++ `entitys_ids`: 社区包含的实体id列表
++ `relationship_ids`: 社区包含的关系id列表
++ `text_unit_ids`: 社区包含的文本单元id列表
++ `period`：社区生成的时间戳。
++ `size`**：**社区的大小，实体个数。
 
 （七）社区报告表`create_final_community_reports.parquet`
 
 <!-- 这是一张图片，ocr 内容为： -->
 ![](/img/post/graphrag-lightrag/18.png)
 
-+ `**id**`**：**<font style="color:rgba(0, 0, 0, 0.87);">每个社区的唯一标识符（UUID）。</font>
-+ `**human_readable_id**`**：**<font style="color:rgba(0, 0, 0, 0.87);">更容易理解的人类可读ID（数字化或短标识符）。</font>
-+ `**community**`**：**<font style="color:rgba(0, 0, 0, 0.87);">社区的编号，代表社区的分类或标识。</font>
-+ `**level**`**：**<font style="color:rgba(0, 0, 0, 0.87);">社区层级，表示社区的聚类粒度。较低的值表示更抽象的层级，较高的值表示更具体的细分社区。</font>
-+ `**title**`**：**<font style="color:rgba(0, 0, 0, 0.87);">社区的标题，对该社区的简要描述，用于表示该社区的主题核心。</font>
-+ `**summary**`**：**<font style="color:rgba(0, 0, 0, 0.87);">社区的摘要，对该社区内容的进一步扩展描述，解释其主题或涵盖的主要内容。</font>
-+ `**full_content**`**：**<font style="color:rgba(0, 0, 0, 0.87);">社区报告的完整内容，包括更详细的信息，可能包含标题、摘要、重要发现等。</font>
-+ `**rank**`**：**<font style="color:rgba(0, 0, 0, 0.87);">社区的排名或评分。可能用来表示社区的重要性、影响力或相关性。通过提示词进行打分。</font>
-+ `**rank_explanation**`**：**<font style="color:rgba(0, 0, 0, 0.87);">对排名的解释。</font>
-+ `**findings**`**：**<font style="color:rgba(0, 0, 0, 0.87);">社区的主要发现（JSON 格式），包含详细的解释或分析。</font>
-+ `**full_content_json**`**：**<font style="color:rgba(0, 0, 0, 0.87);">社区完整内容的 JSON 表示。如果需要以结构化方式处理社区内容，这个字段是关键。</font>
-+ `**period**`**：**<font style="color:rgba(0, 0, 0, 0.87);">报告生成的时间戳。</font>
-+ `**size**`**：**<font style="color:rgba(0, 0, 0, 0.87);">社区的大小，实体个数。</font>
-    - <font style="color:rgba(0, 0, 0, 0.87);"></font>
++ `**id**`**：**每个社区的唯一标识符（UUID）。
++ `**human_readable_id**`**：**更容易理解的人类可读ID（数字化或短标识符）。
++ `**community**`**：**社区的编号，代表社区的分类或标识。
++ `**level**`**：**社区层级，表示社区的聚类粒度。较低的值表示更抽象的层级，较高的值表示更具体的细分社区。
++ `**title**`**：**社区的标题，对该社区的简要描述，用于表示该社区的主题核心。
++ `**summary**`**：**社区的摘要，对该社区内容的进一步扩展描述，解释其主题或涵盖的主要内容。
++ `**full_content**`**：**社区报告的完整内容，包括更详细的信息，可能包含标题、摘要、重要发现等。
++ `**rank**`**：**社区的排名或评分。可能用来表示社区的重要性、影响力或相关性。通过提示词进行打分。
++ `**rank_explanation**`**：**对排名的解释。
++ `**findings**`**：**社区的主要发现（JSON 格式），包含详细的解释或分析。
++ `**full_content_json**`**：**社区完整内容的 JSON 表示。如果需要以结构化方式处理社区内容，这个字段是关键。
++ `**period**`**：**报告生成的时间戳。
++ `**size**`**：**社区的大小，实体个数。
+    - 
 
 ### 查询
 这里介绍两种查询模式：Local模式和Global模式
@@ -358,8 +358,8 @@ documents_df
 
 **global search核心步骤可以分为2步：**
 
-1. map阶段：构建一个包含所有社区报告full_content、社区title的上下文，<font style="color:rgb(25, 27, 31);">并且切分为多个预设大小的chunk。</font>针对用户输入问题，<font style="color:rgb(25, 27, 31);">根据每一个chunk，都生成一个针对query的中间答案 (intermediate answer)，同时模型需要对这个答案打分 (0-100)，用于表示该答案对生成最终答案的帮助程度。0分答案直接过滤。</font>这个过程没有用向量embedding来匹配，而是并发调用大模型来完成的。
-2. reduce阶段：对map中间响应的结果进行排序，<font style="color:rgb(25, 27, 31);">然后放入LLM的上下文窗口，直至达到token限制。最后让LLM根据这些中间答案回答query，得到最终答案 (global answer)。</font>
+1. map阶段：构建一个包含所有社区报告full_content、社区title的上下文，并且切分为多个预设大小的chunk。针对用户输入问题，根据每一个chunk，都生成一个针对query的中间答案 (intermediate answer)，同时模型需要对这个答案打分 (0-100)，用于表示该答案对生成最终答案的帮助程度。0分答案直接过滤。这个过程没有用向量embedding来匹配，而是并发调用大模型来完成的。
+2. reduce阶段：对map中间响应的结果进行排序，然后放入LLM的上下文窗口，直至达到token限制。最后让LLM根据这些中间答案回答query，得到最终答案 (global answer)。
 
 
 
@@ -642,12 +642,12 @@ print(
 ## LLM calls: 3. Prompt tokens: 25247. Output tokens: 1299.
 ```
 
-## <font style="color:rgba(0, 0, 0, 0.87);">GraphRAG总结</font>
-<font style="color:rgba(0, 0, 0, 0.87);">（1）GraphRAG与传统的基准RAG模型相比，在多个评价指标上都展现了明显的优势。</font>
+## GraphRAG总结
+（1）GraphRAG与传统的基准RAG模型相比，在多个评价指标上都展现了明显的优势。
 
-+ **<font style="color:rgba(0, 0, 0, 0.87);"> Comprehensiveness  全面性</font>**<font style="color:rgba(0, 0, 0, 0.87);">：指的是回答的完整性，是否涵盖了问题的隐含上下文。GraphRAG不仅回答了问题的直接内容，还能从上下文中提取相关信息进行补充，提升回答的全面性。</font>
-+ **<font style="color:rgba(0, 0, 0, 0.87);">Diversity多样性</font>**<font style="color:rgba(0, 0, 0, 0.87);">：指的是回答中是否包含了不同的观点或角度。GraphRAG在多样性上的表现优于传统的RAG，能够提供更多元的视角，这对于复杂问题尤为重要。</font>
-+ **<font style="color:rgba(0, 0, 0, 0.87);">Empowerment 人类赋能（human enfranchisement）</font>**<font style="color:rgba(0, 0, 0, 0.87);">：指的是是否提供了支持性源材料或其他上下文信息，这对于验证答案的准确性至关重要。GraphRAG在这方面能够提供更多的上下文支持，帮助用户理解回答的背景。</font>
++ ** Comprehensiveness  全面性**：指的是回答的完整性，是否涵盖了问题的隐含上下文。GraphRAG不仅回答了问题的直接内容，还能从上下文中提取相关信息进行补充，提升回答的全面性。
++ **Diversity多样性**：指的是回答中是否包含了不同的观点或角度。GraphRAG在多样性上的表现优于传统的RAG，能够提供更多元的视角，这对于复杂问题尤为重要。
++ **Empowerment 人类赋能（human enfranchisement）**：指的是是否提供了支持性源材料或其他上下文信息，这对于验证答案的准确性至关重要。GraphRAG在这方面能够提供更多的上下文支持，帮助用户理解回答的背景。
 
 最后再具体介绍评估方式。
 
@@ -673,9 +673,9 @@ print(
 
 索引阶段：
 
-1. R: <font style="color:rgb(51, 51, 51);">利用 LLM 在文本数据中识别实体（节点）及其关系（边）。</font>
-2. P: 构建键值对，<font style="color:rgb(51, 51, 51);">每个索引键是一个单词或短语，能够实现高效检索，而相应的值是一个文本段落，总结来自外部数据的相关片段以辅助文本生成。</font>
-3. D:<font style="color:rgb(51, 51, 51);">从原始文本的不同段中识别并合并相同的实体和关系，</font>去除重复实体和关系，减少不必要的计算，提升处理速度。
+1. R: 利用 LLM 在文本数据中识别实体（节点）及其关系（边）。
+2. P: 构建键值对，每个索引键是一个单词或短语，能够实现高效检索，而相应的值是一个文本段落，总结来自外部数据的相关片段以辅助文本生成。
+3. D:从原始文本的不同段中识别并合并相同的实体和关系，去除重复实体和关系，减少不必要的计算，提升处理速度。
 
 查询阶段：
 
@@ -816,9 +816,9 @@ display(Markdown(result))
 ## LightRAG总结
 1. LightRAG 在效率和有效性方面都表现出色，跟GraphRAG相比显著提高了信息检索和生成的速度和质量，同时降低了LLM推理的成本。
 2. 代码相较于GraphRAG易读。
-3. 检索阶段，相比GrapgRAG，消耗token数和调用大模型的次数大大减少，<font style="color:rgb(65, 65, 65);">实验以Legal数据集为例进行评估，GraphRAG在检索过程中生成1,399个社区，其中610个二级社区用于实际检索。每个社区报告平均包含1,000个令牌，总共消耗610,000个令牌（610个社区×1,000个令牌/社区）。此外，GraphRAG需要逐个遍历社区，导致数百次API调用。相比之下，LightRAG在这个过程中使用少于100个令牌用于关键词生成和检索，并且整个过程仅需一次API调用。</font>
-4. <font style="color:rgb(65, 65, 65);">增量更新：在处理新数据时，GraphRAG和LightRAG在实体和</font>关系提取<font style="color:rgb(65, 65, 65);">方面的开销相似，但是，当引入与Legal数据集相同大小的新数据集时，GraphRAG需要拆除现有的社区结构来纳入新的实体和关系，然后完全重新生成。这一过程每个社区报告大约需要5,000个令牌，对于1,399个社区，大约需要1,399×2×5,000个令牌，成本极高。而LightRAG可以无缝地将新提取的实体和关系集成到现有图中，无需完全重建，在增量更新过程中开销显著更低。</font>
-5. <font style="color:rgb(65, 65, 65);">lightrag跟传统rag效率，论文中未明确比对，但是从技术流程来看，无论是索引阶段还是查询阶段，效率低于传统rag。</font>
+3. 检索阶段，相比GrapgRAG，消耗token数和调用大模型的次数大大减少，实验以Legal数据集为例进行评估，GraphRAG在检索过程中生成1,399个社区，其中610个二级社区用于实际检索。每个社区报告平均包含1,000个令牌，总共消耗610,000个令牌（610个社区×1,000个令牌/社区）。此外，GraphRAG需要逐个遍历社区，导致数百次API调用。相比之下，LightRAG在这个过程中使用少于100个令牌用于关键词生成和检索，并且整个过程仅需一次API调用。
+4. 增量更新：在处理新数据时，GraphRAG和LightRAG在实体和关系提取方面的开销相似，但是，当引入与Legal数据集相同大小的新数据集时，GraphRAG需要拆除现有的社区结构来纳入新的实体和关系，然后完全重新生成。这一过程每个社区报告大约需要5,000个令牌，对于1,399个社区，大约需要1,399×2×5,000个令牌，成本极高。而LightRAG可以无缝地将新提取的实体和关系集成到现有图中，无需完全重建，在增量更新过程中开销显著更低。
+5. lightrag跟传统rag效率，论文中未明确比对，但是从技术流程来看，无论是索引阶段还是查询阶段，效率低于传统rag。
 
 # 评估方式
 **GraphRAG：**
@@ -835,7 +835,7 @@ display(Markdown(result))
 <!-- 这是一张图片，ocr 内容为： -->
 ![](/img/post/graphrag-lightrag/24.png)
 
-GraphRAG要求大模型根据数据集内容生成N个潜在用户，每个用户列出将使用此数据集执行的N个任务，然后，对于每个（用户、任务）组合，我们要求LLM生成N个问题，论文中N=5，也就是，针对每个数据集，一共生成125个问题。然后针对每个问题，让大模型从**<font style="color:rgba(0, 0, 0, 0.87);">Comprehensiveness  全面性，Diversity多样性</font>**，**<font style="color:rgba(0, 0, 0, 0.87);">Empowerment 人类赋能</font>**<font style="color:rgba(0, 0, 0, 0.87);">等方面评选出一个胜者，并给出原因。每个问题可以执行多次取平均。</font>
+GraphRAG要求大模型根据数据集内容生成N个潜在用户，每个用户列出将使用此数据集执行的N个任务，然后，对于每个（用户、任务）组合，我们要求LLM生成N个问题，论文中N=5，也就是，针对每个数据集，一共生成125个问题。然后针对每个问题，让大模型从**Comprehensiveness  全面性，Diversity多样性**，**Empowerment 人类赋能**等方面评选出一个胜者，并给出原因。每个问题可以执行多次取平均。
 
 
 
@@ -860,7 +860,7 @@ LightRAG同样是通过大模型生成问题，每个领域生成125个问题，
 
 1. **生成问题**
 
-**<font style="color:#DF2A3F;">注意：此步骤只生成问题，不生成答案</font>**
+**注意：此步骤只生成问题，不生成答案**
 
 ```python
 Given the following description of a dataset:
