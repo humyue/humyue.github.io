@@ -1,7 +1,7 @@
 ---
-title: "深度学习 | 透彻理解交叉熵的本质"
+title: "透彻理解交叉熵的本质"
 date: 2018-09-26T08:00:54+08:00
-draft: true
+draft: false
 categories: ["Deep-Learning"]
 tags: ["Deep-Learning"]
 author: "Mingy"

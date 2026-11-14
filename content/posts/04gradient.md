@@ -1,10 +1,10 @@
 ---
-title: "深度学习 | 梯度消失和梯度爆炸的原因"
+title: "梯度消失和梯度爆炸的原因"
 date: 2018-09-24T08:00:54+08:00
-draft: true
+draft: false
 categories: ["Deep-Learning"]
 tags: ["Deep-Learning"]
-author: "Ming"
+author: "Mingy"
 ---
 
 **前言：深度神经网络中，我们听到的最多的词就是梯度消失（gradient vanishing ）和梯度爆炸（gradient exploding），那么这两个词到底表示什么意思呢？今天就让我们来一探究竟。**

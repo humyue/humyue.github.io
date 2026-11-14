@@ -1,10 +1,10 @@
 ---
-title: "Markdown快速入门"
+title: "Md快速入门"
 date: 2017-05-20T12:14:54+08:00
-
+draft: false
 categories: ["Markdown"]
 tags: ["Markdown"]
-author: "Humy"
+author: "Mingy"
 ---
 
 #### 一、标题写法

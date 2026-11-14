@@ -17,3 +17,5 @@ resources/
 
 # 本地工具截图（browser agent 等）
 .screenshots/
+
+static/img/favicon/*
