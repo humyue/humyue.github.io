@@ -30,7 +30,7 @@ summaryLength = 120
 [params]
   description = '胡明越的博客，记录深度学习、大模型Agent的学习笔记。'
   keywords = ['胡明越', 'Humingyue', 'LLM','RAG','深度学习', 'Python', 'Agent']
-  author = 'Humy'
+  author = 'Mingy'
   DateFormat = '2006-01-02'
   defaultTheme = 'auto'
   ShowReadingTime = true
