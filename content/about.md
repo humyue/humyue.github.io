@@ -13,7 +13,7 @@ ShowToc: false
 
 Mingyue Hu
 
-- 技能：Vibe Codeing 
+- 技能：Vibe Coding 
 - 职业：算法应用工程师、Agent应用工程师
 
 
